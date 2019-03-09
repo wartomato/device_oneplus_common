@@ -1,0 +1,12 @@
+on post-fs-data
+    # For oneplus camera hal
+    write /data/misc/camera/client_package_name "com.oneplus.camera"
+    chmod 0444 /data/misc/camera/client_package_name
+
+on boot
+    # For Alert Slider
+    chown system system /sys/devices/virtual/switch/tri-state-key/state
+    chmod 0666 /sys/devices/virtual/switch/tri-state-key/state
+
+on post-fs
+    chown system system /sys/class/leds/vibrator/vmax_mv_user

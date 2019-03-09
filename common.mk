@@ -19,9 +19,9 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # DevicHandler
 PRODUCT_PACKAGES += \
-	DeviceHandler
+    DeviceHandler
 
-# Recovery
+# Display
 PRODUCT_PACKAGES += \
-    librecovery_updater_oppo
+    DisplayMode
 
