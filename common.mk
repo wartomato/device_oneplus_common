@@ -28,3 +28,7 @@ PRODUCT_PACKAGES += \
 # Doze mode
 PRODUCT_PACKAGES += \
     Doze
+
+# Pocketmode
+PRODUCT_PACKAGES += \
+    OneplusPocketMode
