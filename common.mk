@@ -25,3 +25,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DisplayMode
 
+# Doze mode
+PRODUCT_PACKAGES += \
+    Doze
