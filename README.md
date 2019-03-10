@@ -10,7 +10,7 @@ Purpose of this repo is to group all merely common features for oneplus devices 
 - PocketMode
 - additional permissions for oneplus devices (/prebuilt)
 - string resources from devicesettings repo (LOS), so the dependency is not needed
-- CameraPackage for delivering OOS Camera & Gallery
+- CameraPackage for delivering OOS Camera
 
 **Should not contain:**
 - KeyDisabler from OP5 is device specific, as this device has hardware keys.
