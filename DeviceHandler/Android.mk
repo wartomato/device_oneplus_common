@@ -38,6 +38,6 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
 
 LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/res \
-    $(TOP)/res
+    $(TOP)/DeviceSettings/res
 
 include $(BUILD_PACKAGE)
