@@ -36,7 +36,7 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
 
 LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/res \
-    $(TOP)/DeviceSettings/res
+    $(TOP)/device/oneplus/common/DeviceSettings/res
 
 package_resource_overlays := $(strip \
     $(wildcard $(foreach dir, $(PRODUCT_PACKAGE_OVERLAYS), \

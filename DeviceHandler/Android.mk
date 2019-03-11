@@ -38,6 +38,6 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
 
 LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/res \
-    $(TOP)/DeviceSettings/res
+    $(TOP)/device/oneplus/common/DeviceSettings/res
 
 include $(BUILD_PACKAGE)
