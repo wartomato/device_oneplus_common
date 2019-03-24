@@ -28,10 +28,14 @@ import org.lineageos.settings.DisplayMode.DeviceSettings;
 public class HBMModeSwitch implements OnPreferenceChangeListener {
 
     private static final String FILE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm";
+    private static final String FILE_MSM = "/sys/devices/virtual/graphics/fb0/hbm";
 
     public static String getFile() {
-        if (Utils.fileWritable(FILE)) {
-            return FILE;
+        if (Utils.fileWritable(FILE_SDM)) {
+            return FILE_SDM;
+        }
+        else if (Utils.fileWritable(FILE_MSM)) {
+            return FILE_MSM;
         }
         return null;
     }

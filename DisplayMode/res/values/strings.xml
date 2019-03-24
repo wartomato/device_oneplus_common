@@ -12,7 +12,7 @@
 -->
 <resources>
     <string name="display_title">Display modes</string>
-    <string name="display_summary">Adjust settings and preferences for display</string>
+    <string name="display_summary">Adjust settings and preferences for display modes</string>
     <string name="srgb_mode_summary"></string>
     <string name="srgb_mode_title">sRGB mode</string>
     <string name="hbm_mode_summary"></string>
@@ -27,5 +27,5 @@
     <string name="panel_category_summary">Modes for panel color correction</string>
     <string name="off_mode_title">Off</string>
     <string name="tile_panel_mode">Panel modes</string>
-    <string name="tile_hbm_mode">High brightness modes</string>
+    <string name="tile_hbm_mode">High brightness mode</string>
 </resources>

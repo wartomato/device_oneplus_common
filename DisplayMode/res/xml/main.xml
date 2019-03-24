@@ -11,13 +11,16 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
     <PreferenceCategory
         android:key="graphics"
         android:title="@string/display_title">
+
         <SwitchPreference
             android:key="hbm"
             android:summary="@string/hbm_mode_summary"
             android:title="@string/hbm_mode_title" />
+
         <Preference
             android:key="panel_category"
             android:title="@string/panel_category_title"
@@ -27,6 +30,7 @@
                     android:targetPackage="org.lineageos.settings.DisplayMode"
                     android:targetClass="org.lineageos.settings.DisplayMode.PanelSettingsActivity" />
         </Preference>
-    </PreferenceCategory>
-</PreferenceScreen>
 
+    </PreferenceCategory>
+
+</PreferenceScreen>
