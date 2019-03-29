@@ -38,7 +38,8 @@ public class OnePlusModeSwitch implements OnPreferenceChangeListener {
         else if (Utils.fileWritable(FILE_MSM)) {
             return FILE_MSM;
         }
-        return null;
+        else
+            return null;
     }
 
     public static boolean isSupported() {
