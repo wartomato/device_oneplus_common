@@ -54,6 +54,7 @@ public class KeyHandler implements DeviceKeyHandler {
 
     private static final String TAG = KeyHandler.class.getSimpleName();
     private static final int GESTURE_REQUEST = 1;
+    private static String FPNAV_ENABLED_PROP = "sys.fpnav.enabled";
 
     public static final String SETTING_NOTIF_SLIDER_UP =
             "device_oneplus_common_notification_slider_up1";
@@ -250,6 +251,10 @@ public class KeyHandler implements DeviceKeyHandler {
             return;
         }
             mVibrator.vibrate(50);
+    }
+
+    public void handleNavbarToggle(boolean enabled) {
+        SystemProperties.set(FPNAV_ENABLED_PROP, enabled ? "0" : "1");
     }
 
     private SharedPreferences getGestureSharedPreferences() {
