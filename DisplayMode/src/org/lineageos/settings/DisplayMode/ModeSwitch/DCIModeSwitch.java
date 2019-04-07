@@ -31,14 +31,6 @@ public class DCIModeSwitch implements OnPreferenceChangeListener {
     private static final String FILE_SDM = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/DCI_P3";
     private static final String FILE_MSM = "/sys/devices/virtual/graphics/fb0/dci_p3";
 
-    public static String getFile(string filename) {
-        if (Utils.fileWritable(filename)) {
-            return filename;
-        } else {
-            return null;
-        }
-    }
-
     public static boolean isSupported() {
         return Utils.fileWritable(getFile(FILE_SDM)) || Utils.fileWritable(getFile(FILE_MSM));
     }
