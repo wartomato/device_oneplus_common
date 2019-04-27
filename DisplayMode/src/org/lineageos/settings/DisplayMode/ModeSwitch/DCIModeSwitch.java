@@ -31,24 +31,28 @@ public class DCIModeSwitch implements OnPreferenceChangeListener {
     private static final String FILE_SDM = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/DCI_P3";
     private static final String FILE_MSM = "/sys/devices/virtual/graphics/fb0/dci_p3";
 
-    public static boolean isSupported() {
-        return Utils.fileWritable(getFile(FILE_SDM)) || Utils.fileWritable(getFile(FILE_MSM));
+    public static String getFile() {
+        if (Utils.fileWritable(FILE_SDM)) {
+            return FILE_SDM;
+        } else if (Utils.fileWritable(FILE_MSM)) {
+            return FILE_MSM;
+        } else {
+        return null;
+        }
+    }
+
+   public static boolean isSupported() {
+        return Utils.fileWritable(getFile());
     }
 
     public static boolean isCurrentlyEnabled(Context context) {
         return Utils.getFileValueAsBoolean(getFile(), false);
     }
 
-    private static boolean isSDM() {
-        if (Utils.fileWritable(getFile(FILE_SDM))) {
-            return true;
-        }
-        return false;
-    }
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         Boolean enabled = (Boolean) newValue;
-        Utils.writeValue(isSDM() ? getFile(FILE_SDM) : getFile(FILE_MDM), enabled ? "1" : "0");
+        Utils.writeValue(getFile(), enabled ? "1" : "0");
         return true;
     }
 }
