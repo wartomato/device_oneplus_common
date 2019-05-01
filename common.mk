@@ -33,16 +33,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OneplusPocketMode
 
-# Prebuilt OOS Camera
-PRODUCT_PACKAGES += \
-    OnePlusCamera \
-    OnePlusCameraService
-
- PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/OnePlus/addon.d/51-oneplus-camera.sh:system/addon.d/51-oneplus-camera.sh \
-    $(LOCAL_PATH)/prebuilt/OnePlus/etc/permissions/privapp-permissions-oem.xml:system/etc/permissions/privapp-permissions-oem.xml \
-    $(LOCAL_PATH)/prebuilt/OnePlus/lib/libopcameralib-em.so:system/lib/libopcameralib-em.so
-
 # make OOS camera and Alert slider node changeable on OP5's
 ifeq ($(TARGET_DEVICE),$(filter $(TARGET_DEVICE),cheeseburger dumpling))
 PRODUCT_COPY_FILES += \
