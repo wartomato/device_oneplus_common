@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.slim.device;
+package com.slim.device.settings;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
