@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_BOARD_PLATFORM), sdm845)
+ifneq ($(TARGET_BOARD_PLATFORM), msm8998)
 include $(CLEAR_VARS)
 LOCAL_MODULE       := init.oneplus-sdm.rc
 #LOCAL_MODULE_TAGS  := optional eng
