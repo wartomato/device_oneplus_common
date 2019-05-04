@@ -39,12 +39,6 @@ PRODUCT_COPY_FILES += \
         $(call find-copy-subdir-files,*,${LOCAL_PATH}/prebuilt/vendor,$(TARGET_COPY_OUT_VENDOR))
 endif
 
-# init injection for sdm845
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME), sdm845)
-PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/prebuilt/init/init.oneplus-sdm.rc:system/etc/init/init.oneplus-sdm.rc
-endif
-
 # OnePlus PlayStore permissions for vendor apps
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/common/etc/permissions/com.oneplus.software.xml:system/etc/permissions/com.oneplus.software.xml \
