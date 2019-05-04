@@ -34,7 +34,7 @@ PRODUCT_PACKAGES += \
     OneplusPocketMode
 
 # make OOS camera and Alert slider node changeable on OP5's
-ifeq ($(TARGET_DEVICE),$(filter $(TARGET_DEVICE),cheeseburger dumpling))
+ifeq ($(TARGET_BOARD_PLATFORM), msm8998)
 PRODUCT_COPY_FILES += \
         $(call find-copy-subdir-files,*,${LOCAL_PATH}/prebuilt/vendor,$(TARGET_COPY_OUT_VENDOR))
 endif
