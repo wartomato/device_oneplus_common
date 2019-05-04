@@ -33,10 +33,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OneplusPocketMode
 
-# make OOS camera and Alert slider node changeable on OP5's
-ifeq ($(TARGET_BOARD_PLATFORM), msm8998)
+# init injection for msm8998
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME), msm8998)
 PRODUCT_COPY_FILES += \
         $(call find-copy-subdir-files,*,${LOCAL_PATH}/prebuilt/vendor,$(TARGET_COPY_OUT_VENDOR))
+endif
+
+# init injection for sdm845
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME), sdm845)
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/prebuilt/init/init.oneplus-sdm.rc:system/etc/init/init.oneplus-sdm.rc
 endif
 
 # OnePlus PlayStore permissions for vendor apps
@@ -44,7 +50,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/common/etc/permissions/com.oneplus.software.xml:system/etc/permissions/com.oneplus.software.xml \
     $(LOCAL_PATH)/prebuilt/common/etc/permissions/com.oneplus.software.overseas.xml:system/etc/permissions/com.oneplus.software.overseas.xml
 
-# HotwordEnrollement app permissions
+# Hotword Enrollement app permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/common/etc/permissions/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
 
