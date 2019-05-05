@@ -44,8 +44,19 @@ public class VibratorStrengthPreference extends Preference implements
     private int mMaxValue;
     private Vibrator mVibrator;
 
-    private static final String FILE_LEVEL = "/sys/class/leds/vibrator/vmax_mv_user";
+    private static final String FILE_LEVEL_SDM = "/sys/class/leds/vibrator/vmax_mv_user";
+    private static final String FILE_LEVEL_MSM = "/sys/devices/virtual/timed_output/vibrator/vmax_mv_user";
     private static final long testVibrationPattern[] = {0,250};
+
+    public static String FILE_LEVEL {
+        if (Utils.fileWritable(FILE_LEVEL_SDM)) {
+            return FILE_LEVEL_SDM;
+        } else if (Utils.fileWritable(FILE_LEVEL_MSM)) {
+            return FILE_LEVEL_MSM;
+        } else {
+        return null;
+        }
+    }
 
     public VibratorStrengthPreference(Context context, AttributeSet attrs) {
         super(context, attrs);

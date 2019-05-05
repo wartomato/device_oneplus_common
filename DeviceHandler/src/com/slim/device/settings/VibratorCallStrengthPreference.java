@@ -46,7 +46,18 @@ public class VibratorCallStrengthPreference extends Preference implements
     private Vibrator mVibrator;
 
     private static final String FILE_LEVEL = "/sys/class/leds/vibrator/vmax_mv_call";
+    private static final String FILE_LEVEL_MSM = "/sys/devices/virtual/timed_output/vibrator/vmax_mv_call";
     private static final long testVibrationPattern[] = {0,250};
+
+    public static String FILE_LEVEL {
+        if (Utils.fileWritable(FILE_LEVEL_SDM)) {
+            return FILE_LEVEL_SDM;
+        } else if (Utils.fileWritable(FILE_LEVEL_MSM)) {
+            return FILE_LEVEL_MSM;
+        } else {
+        return null;
+        }
+    }
 
     public VibratorCallStrengthPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
