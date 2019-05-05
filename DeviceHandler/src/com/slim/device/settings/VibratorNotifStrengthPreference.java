@@ -49,7 +49,7 @@ public class VibratorNotifStrengthPreference extends Preference implements
     private static final String FILE_LEVEL_MSM = "/sys/devices/virtual/timed_output/vibrator/vmax_mv_strong";
     private static final long testVibrationPattern[] = {0,250};
 
-    public static String FILE_LEVEL {
+    public static String getFile() {
         if (Utils.fileWritable(FILE_LEVEL_SDM)) {
             return FILE_LEVEL_SDM;
         } else if (Utils.fileWritable(FILE_LEVEL_MSM)) {
@@ -80,15 +80,15 @@ public class VibratorNotifStrengthPreference extends Preference implements
     }
 
     public static boolean isSupported() {
-        return Utils.fileWritable(FILE_LEVEL);
+        return Utils.fileWritable(getFile());
     }
 
 	public static String getValue(Context context) {
-		return Utils.getFileValue(FILE_LEVEL, "2088");
+		return Utils.getFileValue(getFile(), "2088");
 	}
 
 	private void setValue(String newValue, boolean withFeedback) {
-	    Utils.writeValue(FILE_LEVEL, newValue);
+	    Utils.writeValue(getFile(), newValue);
         SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
         editor.putString(ButtonSettingsFragment.KEY_NOTIF_VIBSTRENGTH, newValue);
         editor.commit();
@@ -103,7 +103,7 @@ public class VibratorNotifStrengthPreference extends Preference implements
         }
 
         String storedValue = PreferenceManager.getDefaultSharedPreferences(context).getString(ButtonSettingsFragment.KEY_NOTIF_VIBSTRENGTH, "2088");
-        Utils.writeValue(FILE_LEVEL, storedValue);
+        Utils.writeValue(getFile(), storedValue);
     }
 
     public void onProgressChanged(SeekBar seekBar, int progress,
