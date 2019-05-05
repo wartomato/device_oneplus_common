@@ -21,6 +21,7 @@ package com.slim.device.settings;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.support.v14.preference.PreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceManager;
 import android.support.v7.preference.PreferenceViewHolder;
@@ -36,7 +37,7 @@ import android.os.Vibrator;
 import com.slim.device.R;
 import com.slim.device.settings.Utils;
 
-public class VibratorCallStrengthPreference extends Preference implements
+public class VibratorCallStrengthPreference extends PreferenceFragment implements
         SeekBar.OnSeekBarChangeListener {
 
     private SeekBar mSeekBar;
