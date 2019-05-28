@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- General strings -->
     <string name="dlg_ok">OK</string>
     <string name="cancel">Mégse</string>
     <string name="reset">Visszaállítás</string>
@@ -34,7 +33,6 @@
     <string name="gesture_circle_title">Kör</string>
     <string name="gesture_double_swipe_title">Kétujjas lefelé csúsztatás</string>
     <string name="gesture_double_tap_title">Dupla érintés</string>
-    <!-- Notification slider -->
     <string name="notification_slider">Értesítési csúszka</string>
     <string name="notification_slider_summary">Állítsa be a csúszka pozícióját</string>
     <string name="action">Művelet</string>
@@ -45,8 +43,11 @@
     <string name="alarms_only">Csak az ébresztések</string>
     <string name="priority_only">Csak a fontosak</string>
     <string name="none">Az összes értesítés</string>
+    <string name="silent">Némítás</string>
     <string name="vibrate">Rezgés</string>
     <string name="ring">Csengés</string>
+    <string name="notification_slider_haptic_feedback_title">Érintési visszajelzés</string>
+    <string name="notification_slider_haptic_feedback_summary">A csúsztatás visszajelzése rezgéssel</string>
     <string name="button_swap_title">Gombfelcserélő</string>
     <string name="button_swap_summary">Felcseréli az Előzmények és a Visszagomb sorrendjét</string>
 </resources>

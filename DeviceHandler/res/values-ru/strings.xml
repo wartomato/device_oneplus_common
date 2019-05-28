@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- General strings -->
     <string name="dlg_ok">ОК</string>
     <string name="cancel">Отмена</string>
     <string name="reset">Сбросить</string>
@@ -34,7 +33,6 @@
     <string name="gesture_circle_title">Круг</string>
     <string name="gesture_double_swipe_title">Свайп двумя пальцами вниз</string>
     <string name="gesture_double_tap_title">Двойное нажатие</string>
-    <!-- Notification slider -->
     <string name="notification_slider">Слайдер уведомлений</string>
     <string name="notification_slider_summary">Настроить положения ползунка</string>
     <string name="action">Действие</string>
@@ -45,8 +43,11 @@
     <string name="alarms_only">Только будильник</string>
     <string name="priority_only">Только важные</string>
     <string name="none">Все уведомления</string>
+    <string name="silent">Без звука</string>
     <string name="vibrate">Вибрация</string>
     <string name="ring">Звонок</string>
+    <string name="notification_slider_haptic_feedback_title">Виброотклик</string>
+    <string name="notification_slider_haptic_feedback_summary">Вибрация при использовании ползунка</string>
     <string name="button_swap_title">Поменять кнопки местами</string>
     <string name="button_swap_summary">Поменять местами кнопки «Недавние» и «Назад»</string>
 </resources>

@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- General strings -->
     <string name="dlg_ok">OK</string>
     <string name="cancel">Annuleren</string>
     <string name="reset">Herstellen</string>
@@ -34,7 +33,6 @@
     <string name="gesture_circle_title">Cirkel</string>
     <string name="gesture_double_swipe_title">Met 2 vingers naar beneden vegen</string>
     <string name="gesture_double_tap_title">Dubbel tikken</string>
-    <!-- Notification slider -->
     <string name="notification_slider">Schuifregelaar voor notificaties</string>
     <string name="notification_slider_summary">Positie van de schuifregelaar instellen</string>
     <string name="action">Actie</string>
@@ -45,8 +43,11 @@
     <string name="alarms_only">Alleen alarmen</string>
     <string name="priority_only">Alleen prioriteit</string>
     <string name="none">Alle notificaties</string>
+    <string name="silent">Dempen</string>
     <string name="vibrate">Trillen</string>
     <string name="ring">Beltoon</string>
+    <string name="notification_slider_haptic_feedback_title">Haptische feedback</string>
+    <string name="notification_slider_haptic_feedback_summary">Trillen bij gebruik van de slider</string>
     <string name="button_swap_title">Knoppen verwisselen</string>
     <string name="button_swap_summary">Recente apps- en Terugknop omwisselen</string>
 </resources>
