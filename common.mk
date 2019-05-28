@@ -21,7 +21,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_PACKAGES += \
 	DeviceHandler
 
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_oppo
-
+ifeq ($(filter enchilada fajita,$(TARGET_DEVICE)),)
+  # Recovery
+  PRODUCT_PACKAGES += \
+      librecovery_updater_oppo
+endif
