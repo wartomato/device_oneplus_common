@@ -14,8 +14,9 @@
 # limitations under the License.
 #
 
-# overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
 
 # DevicHandler
 PRODUCT_PACKAGES += \

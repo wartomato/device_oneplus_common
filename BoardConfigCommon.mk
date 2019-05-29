@@ -20,5 +20,5 @@ BOARD_VENDOR := oppo
 # Do not use for AvB devices, so we exclude this for OP6 / OP6T
 ifeq ($(filter enchilada fajita,$(TARGET_DEVICE)),)
   TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_oppo
-  TARGET_RELEASETOOLS_EXTENSIONS := device/oppo/common
+  TARGET_RELEASETOOLS_EXTENSIONS := device/oneplus/common
 endif
