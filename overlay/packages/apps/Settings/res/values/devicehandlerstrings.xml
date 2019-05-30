@@ -63,5 +63,6 @@
 
     <!-- Device specific settings -->
     <string name="screen_off_gesture_settings_title">Screen off gestures</string>
+    <string name="notification_slider">Notification slider</string>
 
 </resources>
