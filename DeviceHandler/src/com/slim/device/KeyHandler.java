@@ -56,13 +56,13 @@ public class KeyHandler implements DeviceKeyHandler {
     private static final int GESTURE_REQUEST = 1;
 
     public static final String SETTING_NOTIF_SLIDER_UP =
-            "device_oppo_common_notification_slider_up1";
+            "device_oneplus_common_notification_slider_up1";
     public static final String SETTING_NOTIF_SLIDER_MIDDLE =
-            "device_oppo_common_notification_slider_middle1";
+            "device_oneplus_common_notification_slider_middle1";
     public static final String SETTING_NOTIF_SLIDER_BOTTOM =
-            "device_oppo_common_notification_slider_bottom1";
+            "device_oneplus_common_notification_slider_bottom1";
     public static final String SETTING_NOTIF_SLIDER_HAPTIC_FEEDBACK =
-            "device_oppo_common_notification_slider_haptic_feedback";
+            "device_oneplus_common_notification_slider_haptic_feedback";
 
     // Supported scancodes
     private static final int GESTURE_CIRCLE_SCANCODE = 250;
