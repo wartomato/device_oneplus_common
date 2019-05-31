@@ -5,6 +5,7 @@
           android:versionCode="1"
           android:versionName="1" >
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -21,6 +22,13 @@
         <!-- stub to ensure its loaded - DO NOT REMOVE -->
         <activity android:name=".KeyHandler" />
 
+        <!-- Restore settings on startup -->
+        <receiver android:name=".KeyHandler" >
+          <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+          </intent-filter>
+        </receiver>
+              
         <activity
             android:name=".settings.ScreenOffGestureSettings"
             android:label="@string/screen_off_gesture_title"
