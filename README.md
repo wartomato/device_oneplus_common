@@ -1,3 +1,3 @@
-Common device tree for OnePlus/Oppo devices
+Common device tree for OnePlus devices
 
-Contains the Devicehandler/Keyhandler for both manufacturers
+Contains the Devicehandler/Keyhandler as of now.

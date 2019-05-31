@@ -21,9 +21,3 @@ DEVICE_PACKAGE_OVERLAYS += \
 # DevicHandler
 PRODUCT_PACKAGES += \
 	DeviceHandler
-
-ifeq ($(filter enchilada fajita,$(TARGET_DEVICE)),)
-  # Recovery
-  PRODUCT_PACKAGES += \
-      librecovery_updater_oppo
-endif
