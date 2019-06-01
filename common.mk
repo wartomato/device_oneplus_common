@@ -20,4 +20,12 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # DevicHandler
 PRODUCT_PACKAGES += \
-	DeviceHandler
+    DeviceHandler
+
+# Doze
+PRODUCT_PACKAGES += \
+    Doze
+
+# Pocketmode
+PRODUCT_PACKAGES += \
+    OneplusPocketMode

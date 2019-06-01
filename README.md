@@ -1,3 +1,7 @@
 Common device tree for OnePlus devices
 
-Contains the Devicehandler/Keyhandler as of now.
+Contains as of now:
+* DeviceHandler
+* KeyHandler
+* Doze
+* Pocketmode
